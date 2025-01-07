@@ -43,6 +43,17 @@ mongoose
   .catch((err) => {
     console.error(" Error connecting to the DB", err);
   });
+//navbar api 
+  const navbarItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+    { name: "Blog", path: "/blog" },
+];
+  app.get("/api/navbar", (req, res) => {
+    res.json({ navbarItems });
+  });
 //router implement
 app.use("/api/v1", router);
 //not found page
