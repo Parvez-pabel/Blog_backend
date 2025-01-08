@@ -6,6 +6,7 @@ import AboutUsPage from "./Pages/AboutUsPage";
 import ContactPage from "./Pages/ContactPage";
 import ServicePage from "./Pages/ServicePage";
 import DetailsPage from "./Pages/DetailsPage";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 const App = () => {
   return (
@@ -17,8 +18,8 @@ const App = () => {
           <Route exact path="/contact" element={<ContactPage />} />
           <Route exact path="/blogs" element={<BlogPage />} />
           <Route exact path="/service" element={<ServicePage />} />
-          <Route exact path="/details" element={<DetailsPage />} />
-          <Route path="*" element={<NotFound />} />
+          <Route exact path="/details/:id" element={<DetailsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </div>

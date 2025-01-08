@@ -1,10 +1,14 @@
 import React from 'react';
+import Layout from '../Layout/Layout';
 
 const ContactPage = () => {
     return (
-        <div>
-            
-        </div>
+      <div>
+        <Layout>
+          
+          <h1>this is service page</h1>
+        </Layout>
+      </div>
     );
 };
 

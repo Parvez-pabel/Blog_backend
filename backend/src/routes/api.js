@@ -31,4 +31,6 @@ router.get("/readAllBlogs", getAllBlogs);
 router.get("/readBlog/:id", readBlog);
 router.get("/blogByCategory", blogByCategory);
 
+//blog category routes
+
 module.exports = router;
