@@ -34,7 +34,7 @@ exports.createBlog = async (req, res) => {
 
 exports.getAllBlogs = async (req, res) => {
   try {
-    let blogs = await BlogModel.find();
+    let blogs = await BlogModel.find().sort({ createdAt: -1 });
     res.status(200).json({ message: "Blogs found.", data: blogs });
   } catch (error) {
     res.status(500).json({

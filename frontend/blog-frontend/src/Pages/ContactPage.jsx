@@ -6,7 +6,7 @@ const ContactPage = () => {
       <div>
         <Layout>
           
-          <h1>this is service page</h1>
+          <h1>this is contact page</h1>
         </Layout>
       </div>
     );
