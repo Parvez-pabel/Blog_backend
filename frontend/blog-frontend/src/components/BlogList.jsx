@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { allBlogPost } from "../ApiRequest/apiRequest";
 
-const BlogList = () => {
+const BlogList = (props) => {
   const [List, setList] = useState([]);
 
   useEffect(() => {
@@ -47,10 +47,10 @@ const BlogList = () => {
         Latest Blogs
       </h2>
       <div className="divider"></div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10 mb-10">
-        {List.map((item, index) => (
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-20 mb-10">
+        {props.List.map((item, index) => (
           <div key={index} className="p-4 rounded">
-            <div className="card bg-base-100 w-full shadow-xl">
+            <div className="card bg-base-100 w-full shadow-xl h-[400px]">
               <Link to={`/blog/${item._id}`}>
                 <figure>
                   <img
@@ -60,14 +60,14 @@ const BlogList = () => {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title text-lg font-semibold">
+                  <h2 className="card-title text-lg font-semibold ">
                     {item.title}
                   </h2>
                   <p className="text-gray-700 text-sm mb-2">
                     {formatContent(item.content)}
                     <span className="text-blue-500 ml-1">read more</span>
                   </p>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-500 text-sm ">
                     {formatDate(item.createdAt)}
                   </p>
                 </div>

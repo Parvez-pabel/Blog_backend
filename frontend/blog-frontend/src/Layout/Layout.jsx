@@ -64,7 +64,9 @@ const Layout = (props) => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <a className="btn" href="http://localhost:5173/login">
+            Login
+          </a>
         </div>
       </div>
 
