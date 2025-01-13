@@ -51,7 +51,9 @@ const Layout = (props) => {
                 ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">BD Blogs</a>
+          <a className="btn btn-ghost text-xl " href="http://localhost:5173/">
+            BD Blogs
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

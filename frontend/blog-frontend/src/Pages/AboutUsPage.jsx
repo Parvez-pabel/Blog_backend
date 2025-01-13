@@ -1,10 +1,17 @@
 import React from "react";
 import Layout from "../Layout/Layout";
+import Slider from "../components/Slider";
+import TeamMembers from "../components/TeamMembers";
+import AboutUS from "../components/AboutUS";
+import ContactForm from "../components/ContactForm";
 
 const AboutUsPage = () => {
   return (
     <Layout>
-      <h1>this is about page</h1>
+      <Slider />
+      <AboutUS />
+      <TeamMembers />
+      <ContactForm />
     </Layout>
   );
 };

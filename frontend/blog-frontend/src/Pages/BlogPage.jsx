@@ -8,11 +8,6 @@ import Loader from "./../components/Loader"; // Assuming you have a Loader compo
 const BlogPage = () => {
   const [List, setList] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  // Pagination state
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6; // Number of posts per page// Renamed to avoid conflict with Loader component
-
   useEffect(() => {
     (async () => {
       try {

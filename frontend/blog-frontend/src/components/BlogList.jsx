@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { allBlogPost } from "../ApiRequest/apiRequest";
 
-const BlogList = (props) => {
+const BlogList = () => {
   const [List, setList] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const BlogList = (props) => {
         const res = await allBlogPost();
         const sortedBlogs = res.data
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by date
-          .slice(0, 8); // Limit to 8 blogs
+          .slice(0, 12); // Limit to 10 blogs
         setList(sortedBlogs);
       } catch (error) {
         console.error("Failed to fetch blogs:", error);
@@ -48,7 +48,7 @@ const BlogList = (props) => {
       </h2>
       <div className="divider"></div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-20 mb-10">
-        {props.List.map((item, index) => (
+        {List.map((item, index) => (
           <div key={index} className="p-4 rounded">
             <div className="card bg-base-100 w-full shadow-xl h-[400px]">
               <Link to={`/blog/${item._id}`}>
